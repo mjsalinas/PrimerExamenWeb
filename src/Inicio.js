@@ -7,15 +7,14 @@ function Inicio() {
   ]);
 
   return (
-    <div class="container"> 
+    <div className="container"> 
       <h2>Eventos Disponibles</h2>
-      <ul>
-        {eventos.map((evento) => (
-          <li>
-            <strong>{evento.nombre}</strong> - {evento.lugar} - {evento.fecha}
-          </li>
-        ))}
-      </ul>
+{eventos.map((evento, index) => (
+  <li key={index}>
+    <strong>{evento.nombre}</strong> - {evento.lugar} - {evento.fecha}
+  </li>
+))}
+
     </div>
   );
 }
