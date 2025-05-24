@@ -7,6 +7,16 @@ yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
 
+# Ignorar la carpeta de caché de Parcel
+.parcel-cache/
+
+# Ignorar la carpeta de salida (build)
+dist/
+
+# Ignorar dependencias instaladas
+node_modules/
+
+
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
