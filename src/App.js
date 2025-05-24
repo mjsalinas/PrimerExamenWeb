@@ -28,10 +28,10 @@ function App() {
           <Route path="/Error" element={<Error404 />} />
         </Routes>
 
-        {/* No necesitas renderizar <Error404 /> aquí si usas rutas */}
+      
       </div>
     </BrowserRouter>
   );
 }
 
-export default App
+export default App;
