@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 function AgregarEvento() {
   const [mensaje, setMensaje] = useState("");
-
-
+  const [evento, setEvento] = useState({
+    nombre: "",
+    lugar: "",
+    fecha: ""
+  });
    const handleOnChange = (e) => {
     const { name, value } = e.target;
     setEvento(prev => ({ ...prev, [name]: value }));
