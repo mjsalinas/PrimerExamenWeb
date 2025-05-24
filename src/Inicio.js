@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 function Inicio() {
   const eventos = useState([
     { nombre: "ReactConf", lugar: "Online", fecha: "2025-06-10" },
@@ -14,7 +15,6 @@ function Inicio() {
     <strong>{evento.nombre}</strong> - {evento.lugar} - {evento.fecha}
   </li>
 ))}
-
     </div>
   );
 }
