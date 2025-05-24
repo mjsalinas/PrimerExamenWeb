@@ -26,9 +26,10 @@ function AgregarEvento() {
 
   return (
     <div className="container">
-      <h2>Agregar Evento</h2>
+      <h2 className="form-label mb-3">Agregar Evento</h2>
       <form onSubmit={enviarFormulario}>
-        <input
+        <input 
+          className="form-control mb-2"
           type="text"
           name="nombre"
           placeholder="Nombre del evento"
@@ -36,6 +37,7 @@ function AgregarEvento() {
           onChange={handleOnChange}
         />
         <input
+          className="form-control mb-2"
           type="text"
           name="lugar"
           placeholder="Lugar"
@@ -43,6 +45,7 @@ function AgregarEvento() {
           onChange={handleOnChange}
         />
         <input
+          className="form-control mb-2"
           type="date"
           name="fecha"
           placeholder="Fecha"

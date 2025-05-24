@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ListaEventos from "./ListaEventos";
 
 function Inicio() {
   const [eventos] = useState([
@@ -7,15 +8,9 @@ function Inicio() {
   ]);
 
   return (
-    <div className="container"> 
+    <div className="container">
       <h2>Eventos Disponibles</h2>
-      <ul>
-        {eventos.map((evento, idx) => (
-          <li key={idx}>
-            <strong>{evento.nombre}</strong> - {evento.lugar} - {evento.fecha}
-          </li>
-        ))}
-      </ul>
+      <ListaEventos eventos={eventos} />
     </div>
   );
 }
