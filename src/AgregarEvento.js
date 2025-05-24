@@ -24,7 +24,7 @@ function AgregarEvento() {
       return;
     }
 
-    // Si todo va bien
+    // Si Dios lo permite...
     setError("");
     console.log("Evento capturado:", formulario);
     setMensaje("Evento agregado con éxito.");
