@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+
 import Inicio from "./Inicio";
 import AgregarEvento from "./AgregarEvento";
 import Error404 from "./Error";
@@ -9,14 +10,17 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        <nav className="navbar navbar-light bg-light"> 
-          <a className="navbar-brand" href="/">Eventify</a> 
-          <ul>
-            <li><a href="/agregar">Agregar</a></li>
-            <li><a href="/sobre">Sobre</a></li>
-          </ul>
-        </nav>
-
+       <nav className="navbar navbar-light bg-light p-3">
+  <a className="navbar-brand" href="/">Eventify</a>
+  <ul className="nav">
+    <li className="nav-item">
+      <a className="nav-link" href="/agregar">Agregar</a>
+    </li>
+    <li className="nav-item">
+      <a className="nav-link" href="/sobre">Sobre</a>
+    </li>
+  </ul>
+</nav>
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/agregar" element={<AgregarEvento />} />
