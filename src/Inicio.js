@@ -1,17 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 
-function Inicio() {
-  const [eventos] = useState([
-    { nombre: "ReactConf", lugar: "Online", fecha: "2025-06-10" },
-    { nombre: "JS Meetup", lugar: "Tegucigalpa", fecha: "2025-07-01" },
-  ]);
+function Inicio({ eventos }) {
+  if (!eventos || !Array.isArray(eventos) || eventos.length === 0) {
+    return (
+      <div className="container mt-4">
+        <h2>Eventos Disponibles</h2>
+        <div className="alert alert-info">No hay eventos disponibles.</div>
+      </div>
+    );
+  }
 
   return (
-    <div className="container"> 
+    <div className="container mt-4">
       <h2>Eventos Disponibles</h2>
-      <ul>
+      <ul className="list-group">
         {eventos.map((evento, idx) => (
-          <li key={idx}>
+          <li className="list-group-item" key={idx}>
             <strong>{evento.nombre}</strong> - {evento.lugar} - {evento.fecha}
           </li>
         ))}
