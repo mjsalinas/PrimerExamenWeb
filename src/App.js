@@ -1,21 +1,22 @@
 import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
 import Inicio from "./Inicio";
 import AgregarEvento from "./AgregarEvento";
 import Error404 from "./Error";
-
-import { Routes, Route } from "react-router";
 import Sobre from "./SobreNosotros";
 
 function App() {
-  const mostrarError = true;
-
   return (
     <div>
-      <nav class="navbar navbar-light bg-light"> 
-        <a className="navbar-brand" href="/">Eventify</a> 
-        <ul>
-          <li><a href="/agregar">Agregar</a></li>
-          <li><a href="/sobre">Sobre</a></li>
+      <nav className="navbar navbar-light bg-light">
+        <Link to="/" className="navbar-brand">Eventify</Link>
+        <ul className="nav">
+          <li className="nav-item">
+            <Link to="/agregar" className="nav-link">Agregar</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/sobre" className="nav-link">Sobre</Link>
+          </li>
         </ul>
       </nav>
 
@@ -23,10 +24,8 @@ function App() {
         <Route path="/" element={<Inicio />} />
         <Route path="/agregar" element={<AgregarEvento />} />
         <Route path="/sobre" element={<Sobre />} />
-        <Route path="/error" element={<Error404 />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
-
-      {<Error404 />}
     </div>
   );
 }

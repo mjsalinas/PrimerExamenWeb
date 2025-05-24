@@ -2,7 +2,7 @@ import React from "react";
 
 function Sobre() {
   return (
-   <div className="container">
+    <div className="container">
       <h2>Sobre Eventify</h2>
       <p>Eventify es una aplicación React creada para demostrar conceptos fundamentales del desarrollo web:</p>
       <ul>
