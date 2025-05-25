@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div>
-      <nav class="navbar navbar-light bg-light"> 
+      <nav className="navbar navbar-light bg-light"> 
         <a className="navbar-brand" href="/">Eventify</a> 
         <ul>
           <li><a href="/agregar">Agregar</a></li>
@@ -22,11 +22,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/agregar" element={<AgregarEvento />} />
-        <Route path="/sobre" element={<Sobre />} />
-        <Route path="/error" element={<Error404 />} />
+        <Route path="/sobre" element={<Sobre />} /> 
       </Routes>
-
-      {<Error404 />}
     </div>
   );
 }
