@@ -19,6 +19,9 @@ function App() {
             <li className="nav-item">
               <Link className="nav-link" to="/sobre">Sobre</Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/">Inicio</Link>
+            </li>
           </ul>
         </nav>
 
@@ -26,8 +29,8 @@ function App() {
           <Route path="/" element={<Inicio />} />
           <Route path="/agregar" element={<AgregarEvento />} />
           <Route path="/sobre" element={<Sobre />} />
-           <Route path="/Inicio" element={<Sobre />} />
          
+          <Route path="/inicio" element={<Inicio />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </div>
