@@ -26,8 +26,8 @@ function App() {
           <Route path="/" element={<Inicio />} />
           <Route path="/agregar" element={<AgregarEvento />} />
           <Route path="/sobre" element={<Sobre />} />
-           <Route path="/inicio" element={<Sobre />} />
-          {/* Ruta para páginas no encontradas */}
+           <Route path="/Inicio" element={<Sobre />} />
+         
           <Route path="*" element={<Error404 />} />
         </Routes>
       </div>
